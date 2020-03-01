@@ -8,8 +8,6 @@
     <title>Hello World!</title>
 </head>
 <body>
-<p>Serwer name: ${pageContext.request.serverName}</p>
-<p>Serwer port: ${pageContext.request.serverPort}</p>
-<p>Request URI: ${pageContext.request.requestURI}</p>
+<jsp:forward page="redirect.jsp"/>
 </body>
 </html>
