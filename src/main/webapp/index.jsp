@@ -7,7 +7,12 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <h3><% out.print("Hello world");%></h3>
-    <p><%= LocalDate.now().toString()%></p>
+    <h3><% out.print("Hello world");
+        %></h3>
+    <p><%
+        LocalDate now = LocalDate.now();
+        out.print(now)
+
+        ;%></p>
 </body>
 </html>
