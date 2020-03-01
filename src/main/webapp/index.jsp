@@ -9,12 +9,23 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <p>
-        <%= calculator.getN()%><sup>2</sup> wynosi:
-<%
-    int square = calculator.square();
-    out.print(square);
-%>
-    </p>
+    <form method="get" action="search.jsp">
+        <label>
+            Szukane słowo:
+            <input type="text" name="query"/>
+        </label>
+        <label>
+            Strona numer:
+            <input type="text" name="page"/>
+        </label>
+        <label>
+            Sortowanie:
+            <select name="sort" >
+                <option value="asc">rosnąco</option>
+                <option value="desc">malejąco</option>
+            </select>
+        </label>
+        <input type="submit" value="Wyślij"/>
+    </form>
 </body>
 </html>
