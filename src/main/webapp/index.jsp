@@ -8,11 +8,8 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <h3>Licznik odwiedzin: <%= ++visitCount%></h3>
-    <p><%
-        LocalDate now = LocalDate.now();
-        out.print(now);
-
-        ;%></p>
+<p>Serwer name: ${pageContext.request.serverName}</p>
+<p>Serwer port: ${pageContext.request.serverPort}</p>
+<p>Request URI: ${pageContext.request.requestURI}</p>
 </body>
 </html>
