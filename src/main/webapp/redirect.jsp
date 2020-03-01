@@ -8,5 +8,7 @@
 <body>
     <h1>Redirect Page</h1>
     <jsp:include page="include/include-date.jsp"/>
+
+    <p>Przekazany parametr: <%= request.getParameter("myParam")%></p>
 </body>
 </html>
