@@ -27,5 +27,7 @@
         </label>
         <input type="submit" value="Wyślij"/>
     </form>
+
+<a href="search.jsp?query=blablabla&page=23&sort=asc">Link</a>
 </body>
 </html>
