@@ -10,11 +10,11 @@
 </head>
 <body>
     <%
-        Cookie cookie = new Cookie("searchId", String.valueOf(1234));
-        cookie.setMaxAge(60*60*24);
-        response.addCookie(cookie);
+        request.getSession().invalidate();
+        session = request.getSession();
+        session.setAttribute("userId",1234567);
     %>
 
-<a href="search.jsp">search</a>
+<a href="session.jsp">session</a>
 </body>
 </html>
