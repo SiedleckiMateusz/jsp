@@ -11,7 +11,8 @@
     <p>
         5<sup>2</sup> wynosi:
 <%
-    int square = calculator.square(5);
+    calculator.setN(5);
+    int square = calculator.square();
     out.print(square);
 %>
     </p>
