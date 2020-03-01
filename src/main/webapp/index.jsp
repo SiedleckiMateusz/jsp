@@ -9,25 +9,12 @@
     <title>Hello World!</title>
 </head>
 <body>
-    <form method="get" action="search.jsp">
-        <label>
-            Szukane słowo:
-            <input type="text" name="query"/>
-        </label>
-        <label>
-            Strona numer:
-            <input type="text" name="page"/>
-        </label>
-        <label>
-            Sortowanie:
-            <select name="sort" >
-                <option value="asc">rosnąco</option>
-                <option value="desc">malejąco</option>
-            </select>
-        </label>
-        <input type="submit" value="Wyślij"/>
-    </form>
+    <%
+        Cookie cookie = new Cookie("searchId", String.valueOf(1234));
+        cookie.setMaxAge(60*60*24);
+        response.addCookie(cookie);
+    %>
 
-<a href="search.jsp?query=blablabla&page=23&sort=asc">Link</a>
+<a href="search.jsp">search</a>
 </body>
 </html>

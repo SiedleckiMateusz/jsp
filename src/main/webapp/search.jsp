@@ -13,9 +13,16 @@
     <title>Searching</title>
 </head>
 <body>
-    <p>Szukana wartość: "<%= request.getParameter("query")%>"</p>
-    <p>Strona: <%= request.getParameter("page")%></p>
-
-    <p>Sortowanie: <%= request.getParameter("sort").equals("asc")? "Rosnąco":"Malejąco" %></p>
+    <%
+        Cookie[] cookies = request.getCookies();
+        if (cookies!=null){
+            out.println("<h2>znalazłem ciasteczka</h2>");
+            for (Cookie cookie: cookies){
+                out.print("Name: "+cookie.getName()+", Value: "+cookie.getValue()+"<br>");
+            }
+        }else {
+            out.println("<h2>nie znaleziono ciasteczek</h2>");
+        }
+    %>
 </body>
 </html>
